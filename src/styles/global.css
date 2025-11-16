@@ -32,5 +32,5 @@
 
 button,
 a {
-  @apply hover:text-foreground cursor-pointer;
+  @apply hover:text-foreground cursor-pointer transition-[color] duration-250 ease-in-out focus-visible:text-foreground;
 }
