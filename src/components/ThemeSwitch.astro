@@ -5,7 +5,7 @@
 <div class="text-sm relative max-w-fit">
   <button
     data-toggle-drop
-    class="flex gap-2 w-[calc(6ch+3em+1em)] px-3 py-2 border-2 border-primary/20 rounded-lg"
+    class="flex gap-2 w-[calc(6ch+3em+1em)] px-3 py-2 border-2 border-border rounded-lg"
   >
     <svg
       fill="none"
@@ -24,7 +24,7 @@
   </button>
 
   <ul
-    class="grid w-[calc(6ch+3em+1em)] border-2 border-primary/20 rounded-lg absolute bottom-0 right-0 translate-y-[calc(100%+0.4em)]"
+    class="hidden bg-background w-[calc(6ch+3em+1em)] border-2 border-border rounded-lg absolute bottom-0 right-0 translate-y-[calc(100%+0.4em)]"
     data-toggle-menu
   >
     <li>
@@ -93,6 +93,7 @@
   const btn = document.querySelector<HTMLButtonElement>("[data-toggle-drop]");
   const paths = document.querySelectorAll("[data-toggle] > svg > path");
 
+  document.addEventListener("click", handleOutsideClick, true);
   btn?.addEventListener("click", () => menu?.classList.toggle("hidden"));
   menu?.addEventListener("click", (e) => {
     if (!(e.target instanceof HTMLButtonElement)) return;
@@ -127,6 +128,13 @@
     btn?.querySelector("svg > path")?.setAttribute("d", themes[tmp]!);
     btn!.querySelector("span")!.textContent =
       tmp[0]?.toUpperCase() + tmp.slice(1);
+  }
+
+  function handleOutsideClick(e: PointerEvent) {
+    if (!(e.target instanceof HTMLElement)) return;
+    if (!menu?.parentElement?.contains(e.target)) {
+      menu?.classList.add("hidden");
+    }
   }
 
   changeTheme();
