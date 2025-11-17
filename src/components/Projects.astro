@@ -40,7 +40,7 @@ projects.push({
           <div class="px-4 py-3 ">
             <div class="flex gap-2 pt-1">
               {p.languages.map((l) => (
-                <img src={get(l)} alt={l} class="w-5 h-5" />
+                <img src={get(l)} alt={l} class="w-5 h-5" fetchpriority="low" />
               ))}
             </div>
 
