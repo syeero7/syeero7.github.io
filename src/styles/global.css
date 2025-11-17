@@ -42,13 +42,14 @@ button {
 
 @media (width >= 48em) {
   .project {
-    grid-template-columns: 20em calc(100%-20em);
+    --project-img: 21.75em;
+    grid-template-columns: var(--project-img) calc(100% - var(--project-img));
 
     @apply grid grid-flow-col;
 
     img {
       grid-area: 1/1/3/2;
-      max-width: 21.75em;
+      max-width: var(--project-img);
 
       @apply rounded-tr-none rounded-bl-lg;
     }

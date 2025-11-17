@@ -30,8 +30,7 @@ const { includeNames = false } = Astro.props;
     socials.map((s) => (
       <a
         href={s.link}
-    class=`flex max-w-fit gap-2 text-sm content-center px-3 py-2 ${includeNames?"border-2 border-border rounded-lg":""}`
-
+        class={`flex max-w-fit gap-2 text-sm content-center px-3 py-2 ${includeNames ? "border-2 border-border rounded-lg" : ""}`}
         title={s.name}
       >
         <s.SVG class="w-6 h-6" />
