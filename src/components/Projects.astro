@@ -1,4 +1,6 @@
 ---
+import { get } from "@scripts/techstack.ts";
+
 type Project = {
   title: string;
   source: string;
@@ -15,7 +17,7 @@ projects.push({
   image: "https://placehold.co/768x432.png",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-  languages: ["go"],
+  languages: ["Go"],
 });
 projects.push({
   title: "Lorem Ipsum",
@@ -24,7 +26,7 @@ projects.push({
   view: "https.example.com",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-  languages: ["ts", "html", "css"],
+  languages: ["TypeScript", "HTML", "CSS"],
 });
 ---
 
@@ -35,10 +37,10 @@ projects.push({
       projects.map((p) => (
         <article class="bg-secondary/25 border-border border-2 rounded-lg project">
           <img src={p.image} alt="" class="rounded-t-lg aspect-3/2" />
-          <div class="px-4 py-3">
-            <div>
+          <div class="px-4 py-3 ">
+            <div class="flex gap-2 pt-1">
               {p.languages.map((l) => (
-                <span>{l}</span>
+                <img src={get(l)} alt={l} class="w-5 h-5" />
               ))}
             </div>
 

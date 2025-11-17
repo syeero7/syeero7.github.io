@@ -47,7 +47,7 @@ button {
 
     @apply grid grid-flow-col;
 
-    img {
+    & > img {
       grid-area: 1/1/3/2;
       max-width: var(--project-img);
 
