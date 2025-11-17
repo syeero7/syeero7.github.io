@@ -36,8 +36,30 @@ a {
   @apply bg-background hover:text-foreground cursor-pointer transition-colors duration-250 ease-in-out focus-visible:text-foreground;
 }
 
+h1,
+h2,
+h3 {
+  @apply text-foreground font-bold;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
 .focus-bg {
   @apply hover:bg-secondary focus-visible:bg-secondary;
+}
+
+.container-bg {
+  @apply border-2 border-border rounded-lg bg-secondary/25;
 }
 
 @media (width >= 48em) {

@@ -31,20 +31,20 @@ projects.push({
 ---
 
 <section class="mt-8">
-  <h2 class="text-foreground text-2xl mb-5 font-bold">Projects</h2>
+  <h2 class="mb-5">Projects</h2>
   <div class="grid gap-5">
     {
       projects.map((p) => (
-        <article class="bg-secondary/25 border-border border-2 rounded-lg project">
+        <article class="project container-bg">
           <img src={p.image} alt="" class="rounded-t-lg aspect-3/2" />
-          <div class="px-4 py-3 ">
+          <div class="px-4 py-3">
             <div class="flex gap-2 pt-1">
               {p.languages.map((l) => (
-                <img src={get(l)} alt={l} class="w-5 h-5" fetchpriority="low" />
+                <img src={get(l)} alt={l} class="size-5" fetchpriority="low" />
               ))}
             </div>
 
-            <h3 class="mt-2 text-foreground text-lg font-bold">{p.title}</h3>
+            <h3 class="mt-2">{p.title}</h3>
             <p class="my-1.5">{p.description}</p>
           </div>
 
@@ -56,7 +56,7 @@ projects.push({
               >
                 <svg
                   viewBox="0 -960 960 960"
-                  class="h-6 w-6"
+                  class="size-6"
                   fill="currentcolor"
                 >
                   <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
@@ -69,7 +69,7 @@ projects.push({
               href={p.source}
               class="focus-bg flex gap-2 ml-auto py-2 px-3 border-border border-2 rounded-lg"
             >
-              <svg viewBox="0 -960 960 960" class="h-6 w-6" fill="currentcolor">
+              <svg viewBox="0 -960 960 960" class="size-6" fill="currentcolor">
                 <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z" />
               </svg>
               <span class="mt-0.5">Source</span>
