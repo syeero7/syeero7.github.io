@@ -1,0 +1,23 @@
+---
+import SocialLinks from "@components/SocialLinks.astro";
+---
+
+<section
+  class="bg-secondary/25 border-border border-2 p-6 md:p-8 rounded-lg md:flex gap-6"
+>
+  <img
+    src="https://avatars.githubusercontent.com/u/175179417?v=4"
+    alt=""
+    class="w-32 h-32 rounded-[50%] border-2 border-primary mx-auto drop-shadow-custom md:mt-3"
+  />
+  <div class="max-md:text-center md:grid">
+    <h1 class="text-foreground text-3xl my-3 font-bold">Emal Hasitha</h1>
+    <p class="px-2.5 text-primary md:px-0.5 mb-5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <SocialLinks includeNames />
+  </div>
+</section>
