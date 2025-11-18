@@ -1,4 +1,11 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "bracketSameLine": true
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
 }

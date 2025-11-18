@@ -1,0 +1,29 @@
+---
+import { getAll } from "@scripts/techstack";
+---
+
+<div class="mt-8 overflow-hidden h-10 rounded-full">
+  <ul
+    class="marquee gap-4 items-center py-2 font-semibold flex text-foreground"
+    data-marquee
+  >
+    {
+      getAll().map((t) => (
+        <li class="flex gap-2 shrink-0">
+          <img src={t.url} alt={t.name} class="size-6" />
+          <span>{t.name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script>
+  const marquee = document.querySelector<HTMLUListElement>("[data-marquee]");
+  marquee?.style.setProperty("--marquee-width", `${marquee?.scrollWidth}px`);
+  const fragment = document.createDocumentFragment();
+  marquee?.childNodes.forEach((node) => {
+    fragment.appendChild(node.cloneNode(true));
+  });
+  marquee?.appendChild(fragment);
+</script>

@@ -1,0 +1,25 @@
+---
+import SocialLinks from "@components/SocialLinks.astro";
+---
+
+<section class="container-bg p-6 md:p-8 md:flex gap-6">
+  <img
+    src="https://avatars.githubusercontent.com/u/175179417?v=4"
+    alt=""
+    class="size-32 rounded-[50%] border-2 border-primary mx-auto drop-shadow-custom md:mt-3"
+    fetchpriority="low"
+  />
+  <div
+    class="max-md:text-center md:grid md:max-w-[calc(100%+1.5em-8em-(2em*2))]"
+  >
+    <!-- maw width = 100% + gap - img width - (section inline padding) -->
+    <h1 class="my-3">Emal Hasitha</h1>
+    <p class="px-2.5 text-primary md:px-0.5 mb-5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco.
+    </p>
+
+    <SocialLinks includeNames />
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import Mail from "@assets/email.svg";
+import Github from "@assets/github.svg";
+
+type Social = {
+  name: string;
+  link: string;
+  SVG: typeof Mail;
+};
+
+type Props = { includeNames?: boolean };
+
+const socials: Social[] = [];
+socials.push({
+  name: "GitHub",
+  link: "https://github.com/syeero7",
+  SVG: Github,
+});
+socials.push({
+  name: "Email",
+  link: "mailto:email.com",
+  SVG: Mail,
+});
+
+const { includeNames = false } = Astro.props;
+---
+
+<div
+  class={`grid grid-flow-col justify-center gap-${includeNames ? 4 : 2} md:max-w-fit`}
+>
+  {
+    socials.map((s) => (
+      <a
+        href={s.link}
+        class={`flex max-w-fit content-center ${includeNames ? "border-2 border-border rounded-lg gap-2 px-3 py-2 text-sm focus-bg" : ""}`}
+        title={s.name}
+      >
+        <s.SVG aria-hidden />
+        {includeNames && <span>{s.name}</span>}
+      </a>
+    ))
+  }
+</div>
