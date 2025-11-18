@@ -20,6 +20,7 @@ import { getAll } from "@scripts/techstack";
 
 <script>
   const marquee = document.querySelector<HTMLUListElement>("[data-marquee]");
+  marquee?.style.setProperty("--marquee-width", `${marquee?.scrollWidth}px`);
   const fragment = document.createDocumentFragment();
   marquee?.childNodes.forEach((node) => {
     fragment.appendChild(node.cloneNode(true));

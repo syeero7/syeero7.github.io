@@ -65,7 +65,7 @@ h3 {
 .marquee {
   --marquee-duration: 30s;
 
-  width: fit-content;
+  width: calc(1em + var(--marquee-width, 100%));
   animation: infinite-scroll var(--marquee-duration) linear infinite;
 }
 
@@ -96,10 +96,6 @@ div:has(> .marquee) {
 
   .project-links {
     grid-area: 2/2/2/3;
-  }
-
-  .marquee {
-    --marquee-duration: 45s;
   }
 }
 
