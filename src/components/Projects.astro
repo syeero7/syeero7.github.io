@@ -1,33 +1,6 @@
 ---
-import { get } from "@scripts/techstack.ts";
-
-type Project = {
-  title: string;
-  source: string;
-  view?: string;
-  image: string;
-  description: string;
-  languages: string[];
-};
-
-const projects: Project[] = [];
-projects.push({
-  title: "File Crow",
-  source: "https://github.com",
-  image: "https://placehold.co/768x432.png",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-  languages: ["Go"],
-});
-projects.push({
-  title: "Lorem Ipsum",
-  source: "https://github.com",
-  image: "https://placehold.co/768x432.png",
-  view: "https.example.com",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-  languages: ["TypeScript", "HTML", "CSS"],
-});
+import { get } from "@data/techstack.ts";
+import { projects } from "@data/project-data.ts";
 ---
 
 <section class="mt-8">

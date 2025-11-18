@@ -10,7 +10,7 @@
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@scripts/*": ["./src/scripts/*"]
+      "@data/*": ["./src/data/*"]
     }
   }
 }
