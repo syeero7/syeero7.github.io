@@ -34,6 +34,11 @@
 button,
 a {
   @apply bg-background hover:text-foreground cursor-pointer transition-colors duration-250 ease-in-out focus-visible:text-foreground;
+
+  & > span,
+  & > svg {
+    @apply pointer-events-none;
+  }
 }
 
 h1,
