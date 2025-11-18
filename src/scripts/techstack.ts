@@ -9,6 +9,10 @@ export function get(name: string) {
   return techstack[name];
 }
 
+export function getAll() {
+  return Object.entries(techstack).map((t) => ({ name: t[0], url: t[1] }));
+}
+
 set(
   "HTML",
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
