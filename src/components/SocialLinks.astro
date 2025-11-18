@@ -35,8 +35,8 @@ const { includeNames = false } = Astro.props;
         class={`flex max-w-fit content-center ${includeNames ? "border-2 border-border rounded-lg gap-2 px-3 py-2 text-sm focus-bg" : ""}`}
         title={s.name}
       >
-        <s.SVG class="size-6" />
-        {includeNames && <span class="mt-0.5">{s.name}</span>}
+        <s.SVG aria-hidden />
+        {includeNames && <span>{s.name}</span>}
       </a>
     ))
   }

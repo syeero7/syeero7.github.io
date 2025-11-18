@@ -39,6 +39,14 @@ a {
   & > svg {
     @apply pointer-events-none;
   }
+
+  & > svg + span {
+    @apply mt-0.5;
+  }
+
+  & > svg {
+    @apply size-6;
+  }
 }
 
 h1,
