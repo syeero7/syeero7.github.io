@@ -41,7 +41,7 @@ a {
   }
 
   & > svg + span {
-    @apply mt-0.5;
+    @apply mt-0.5 font-semibold;
   }
 
   & > svg {
