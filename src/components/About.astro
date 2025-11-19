@@ -1,12 +1,15 @@
 ---
 import SocialLinks from "@components/SocialLinks.astro";
+
+const content =
+  "I started programming with Python on a friend's suggestion and got hooked right away. When I was looking for what to do next, I found The Odin Project and completed their full-stack curriculum, learning JavaScript, HTML, CSS, React, PostgreSQL, and NodeJS. To improve my backend skills, I moved to Boot.dev, completed their courses and learned Go, TypeScript, and CI/CD. Since then, I've been learning everything I can about programming.";
 ---
 
 <section class="container-bg p-6 md:p-8 md:flex gap-6">
   <img
     src="https://avatars.githubusercontent.com/u/175179417?v=4"
     alt=""
-    class="size-32 rounded-[50%] border-2 border-primary mx-auto drop-shadow-custom md:mt-3"
+    class="size-32 rounded-[50%] border-2 border-primary mx-auto drop-shadow-custom md:mt-14 md:mx-3"
     fetchpriority="low"
   />
   <div
@@ -14,12 +17,7 @@ import SocialLinks from "@components/SocialLinks.astro";
   >
     <!-- maw width = 100% + gap - img width - (section inline padding) -->
     <h1 class="my-3">Emal Hasitha</h1>
-    <p class="px-2.5 text-primary md:px-0.5 mb-5">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco.
-    </p>
-
+    <p class="px-2.5 text-primary md:px-0.5 mb-5">{content}</p>
     <SocialLinks includeNames />
   </div>
 </section>
