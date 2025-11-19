@@ -96,6 +96,7 @@ div:has(> .marquee) {
   .project {
     --project-img: 21.75em;
     grid-template-columns: var(--project-img) calc(100% - var(--project-img));
+    grid-template-rows: 1fr 3.75em;
 
     @apply grid grid-flow-col;
 
