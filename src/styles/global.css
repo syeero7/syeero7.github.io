@@ -67,6 +67,30 @@ h3 {
   @apply text-lg;
 }
 
+[data-toggle-menu] {
+  transition-property: opacity, display;
+  transition-duration: 0.25s;
+  transition-behavior: allow-discrete;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  display: block;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+@starting-style {
+  [data-toggle-menu] {
+    opacity: 1;
+    display: block;
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+}
+
 .focus-bg {
   @apply hover:bg-secondary focus-visible:bg-secondary;
 }
