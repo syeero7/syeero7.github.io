@@ -14,7 +14,7 @@ projects.push({
   source: "https://github.com/syeero7/file-crow",
   image: "/project-file-crow.webp",
   description: "A file server for sharing files over a local network via HTTP.",
-  languages: ["Go"],
+  languages: ["Go", "HTML", "CSS"],
 });
 projects.push({
   title: "Chess",
@@ -24,4 +24,12 @@ projects.push({
   description:
     "A client-side chess game featuring offline modes for player vs player and player vs AI gameplay.",
   languages: ["TypeScript", "HTML", "CSS"],
+});
+projects.push({
+  title: "Deliverer",
+  source: "https://github.com/syeero7/odin-msg-app",
+  image: "/project-deliverer.webp",
+  view: "https://deliverer.netlify.app",
+  description: "Mobile responsive real-time messaging app built using React.",
+  languages: ["React", "TypeScript", "NodeJS", "Prisma"],
 });
