@@ -21,11 +21,11 @@ import { projects } from "@data/project-data.ts";
             <p class="my-1.5">{p.description}</p>
           </div>
 
-          <div class="flex px-4 pb-4 text-sm project-links">
+          <div class="flex px-4 pb-4 text-xs project-links">
             {p.view && (
               <a
                 href={p.view}
-                class="focus-bg flex gap-2 py-2 px-3 border-border border-2 rounded-lg"
+                class="focus-bg flex items-center gap-2 py-1 px-2 border-border border-2 rounded-lg"
               >
                 <svg
                   viewBox="0 -960 960 960"
@@ -40,7 +40,7 @@ import { projects } from "@data/project-data.ts";
 
             <a
               href={p.source}
-              class="focus-bg flex gap-2 ml-auto py-2 px-3 border-border border-2 rounded-lg"
+              class="focus-bg flex gap-2 ml-auto items-center py-1 px-2 border-border border-2 rounded-lg"
             >
               <svg
                 viewBox="0 -960 960 960"

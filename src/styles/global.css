@@ -31,21 +31,23 @@
   }
 }
 
-button,
-a {
-  @apply bg-background hover:text-foreground cursor-pointer transition-colors duration-250 ease-in-out focus-visible:text-foreground;
+@layer utilities {
+  button,
+  a {
+    @apply bg-background hover:text-foreground cursor-pointer transition-colors duration-250 ease-in-out focus-visible:text-foreground;
 
-  & > span,
-  & > svg {
-    @apply pointer-events-none;
-  }
+    & > span,
+    & > svg {
+      @apply pointer-events-none;
+    }
 
-  & > svg + span {
-    @apply mt-0.5 font-semibold;
-  }
+    & > svg + span {
+      @apply font-semibold;
+    }
 
-  & > svg {
-    @apply size-6;
+    & > svg {
+      @apply size-5;
+    }
   }
 }
 
@@ -126,7 +128,7 @@ div:has(> .marquee) {
   .project {
     --project-img: 21.75em;
     grid-template-columns: var(--project-img) calc(100% - var(--project-img));
-    grid-template-rows: 1fr 3.75em;
+    grid-template-rows: 1fr 3em;
 
     @apply grid grid-flow-col;
 
