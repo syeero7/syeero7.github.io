@@ -11,10 +11,11 @@ export const projects: Project[] = [];
 
 projects.push({
   title: "File Crow",
-  source: "https://github.com/syeero7/file-crow",
-  image: "/project-file-crow.webp",
-  description: "A file server for sharing files over a local network via HTTP.",
-  languages: ["Go", "HTML", "CSS"],
+  source: "https://github.com/syeero7/filecrow",
+  image: "/project-filecrow.webp",
+  description:
+    "A peer-to-peer file server for sharing files over the local network.",
+  languages: ["Go", "TypeScript", "HTML", "CSS"],
 });
 projects.push({
   title: "Chess",
