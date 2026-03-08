@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
@@ -16,6 +18,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "oxlint": "^1.51.0",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1"
   }
