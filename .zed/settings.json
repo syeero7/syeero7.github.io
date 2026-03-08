@@ -1,0 +1,18 @@
+{
+  "language_servers": [
+    "typescript-language-server",
+    "prettier",
+    "!biome",
+    "!eslint",
+    "..."
+  ],
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "astro": "html"
+        }
+      }
+    }
+  }
+}
