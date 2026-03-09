@@ -25,9 +25,7 @@ socials.push({
 const { includeNames = false } = Astro.props;
 ---
 
-<div
-  class={`grid grid-flow-col justify-center gap-${includeNames ? 4 : 2} md:max-w-fit`}
->
+<div class={`grid grid-flow-col justify-center gap-${includeNames ? 4 : 2} md:max-w-fit`}>
   {
     socials.map((s) => (
       <a

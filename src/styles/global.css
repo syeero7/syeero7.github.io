@@ -85,13 +85,7 @@ h3 {
 }
 
 div:has(> .marquee) {
-  mask: linear-gradient(
-    to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent 100%
-  );
+  mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent 100%);
 }
 
 .project > img {
