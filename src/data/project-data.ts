@@ -10,19 +10,20 @@ type Project = {
 export const projects: Project[] = []
 
 projects.push({
+  title: "Bash Language Server",
+  source: "https://github.com/syeero7/bash_ls",
+  image: "/project-bash_ls.webp",
+  description:
+    "Bash language server that supports hover, completion, go to definition, and find references",
+  languages: ["Zig"],
+})
+projects.push({
   title: "ADB Explorer",
   source: "https://github.com/syeero7/adb-explorer",
   image: "/project-adb-explorer.webp",
   description:
     "A cross-platform desktop app built for file transfer and management between PC and Android mobile devices using Android Debug Bridge (ADB) protocol.",
   languages: ["Go", "Svelte", "TypeScript", "CSS"],
-})
-projects.push({
-  title: "Cosmic Reader",
-  source: "https://github.com/syeero7/cosmic-reader",
-  image: "/project-cosmic-reader.webp",
-  description: "A cross-platform desktop app for reading and managing comics.",
-  languages: ["Go", "TypeScript", "CSS"],
 })
 projects.push({
   title: "File Crow",
