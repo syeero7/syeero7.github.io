@@ -8,7 +8,7 @@
               class="flex border-2 content-center border-border rounded-lg gap-2 px-3 py-2 text-sm focus-bg max-h-11"
               title="{{ .Name }}"
             >
-            <img src="{{ .Icon }}" alt="" fetchpriority="low" />
+            {{ (SVG .Icon)}}
               {{ .Name }}
             </a>
       {{ end }}
@@ -21,7 +21,7 @@
               class="flex"
               title="{{ .Name }}"
             >
-            <img src="{{ .Icon }}" alt="" class="size-6" fetchpriority="low" />
+            {{ (SVG .Icon)}}
             </a>
       {{ end }}
     </div>
