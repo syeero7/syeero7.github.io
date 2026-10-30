@@ -1,0 +1,48 @@
+{{ define "project" }}
+  <article class="project container-bg">
+    <img src="{{ .ImageURL }}" alt="" class="rounded-t-lg aspect-3/2" />
+    <div class="px-4 py-3">
+      <div class="flex gap-2 pt-1">
+        {{ range .Languages }}
+          <img src="{{ (TechStack.GetURL .) }}" alt="{{ . }}" class="size-5" fetchpriority="low" />
+        {{ end }}
+      </div>
+
+      <h3 class="mt-2">{p.title}</h3>
+      <p class="my-1.5">{p.description}</p>
+    </div>
+
+    <div class="flex px-4 pb-4 text-xs project-links">
+      {{ if  ne .ViewURL "" }}
+          <a
+            href="{{ .ViewURL }}"
+            class="focus-bg flex items-center gap-2 py-1 px-2 border-border border-2 rounded-lg"
+          >
+            <svg viewBox="0 -960 960 960" aria-hidden="true" fill="currentcolor">
+              <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+            </svg>
+            <span>View</span>
+          </a>
+      {{ end }}
+
+      <a
+        href="{{ .SourceURL }}"
+        class="focus-bg flex gap-2 ml-auto items-center py-1 px-2 border-border border-2 rounded-lg"
+      >
+        <svg viewBox="0 -960 960 960" aria-hidden="true" fill="currentcolor">
+          <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z" />
+        </svg>
+        <span>Source</span>
+      </a>
+    </div>
+  </article>
+{{ end }}
+
+{{ define "projects" }}
+  <section class="mt-8">
+    <h2 class="mb-5">Projects</h2>
+    <div class="grid gap-5">
+      {{ range . }} {{ template "project" . }} {{ end }}
+    </div>
+  </section>
+{{ end }}
