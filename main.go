@@ -1,11 +1,14 @@
 package main
 
 import (
+	"bytes"
 	"html/template"
 	"log"
 	"os"
 
 	"github.com/syeero7/syeero7.github.io/templates"
+	"github.com/tdewolff/minify/v2"
+	"github.com/tdewolff/minify/v2/html"
 )
 
 func main() {
@@ -101,15 +104,27 @@ func main() {
 		},
 	}
 
-	tmpl, err := template.New("index.html").Funcs(tmplFuncs).ParseGlob("templates/*.tmpl")
+	tmpl, err := template.New("").Funcs(tmplFuncs).ParseGlob("templates/*.tmpl")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if err := tmpl.ExecuteTemplate(os.Stdout, "index.tmpl", data); err != nil {
+	buf := new(bytes.Buffer)
+	if err := tmpl.ExecuteTemplate(buf, "index.tmpl", data); err != nil {
 		log.Fatal(err)
 	}
 
+	file, err := os.OpenFile("index.html", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	m := minify.New()
+	m.AddFunc("text/html", html.Minify)
+	if err := m.Minify("text/html", file, buf); err != nil {
+		log.Fatal(err)
+	}
 }
 
 func urlDevIcons(path string) string {
