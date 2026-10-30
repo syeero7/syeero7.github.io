@@ -4,7 +4,7 @@
     <div class="px-4 py-3">
       <div class="flex gap-2 pt-1">
         {{ range .Languages }}
-          <img src="{{ (TechStack.GetURL .) }}" alt="{{ . }}" class="size-5" fetchpriority="low" />
+          <img src="{{ (TechStack.Get .) }}" alt="{{ . }}" class="size-5" fetchpriority="low" />
         {{ end }}
       </div>
 

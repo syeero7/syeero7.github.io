@@ -16,13 +16,17 @@ type About struct {
 
 type TechStack map[string]string
 
-func (t TechStack) GetURL(name string) string {
+func (t TechStack) Get(name string) string {
 	url, ok := t[name]
 	if !ok {
 		log.Panicln(name, " does not exist")
 	}
 
 	return url
+}
+
+func (t TechStack) Set(key, val string) {
+	t[key] = val
 }
 
 type Project struct {
