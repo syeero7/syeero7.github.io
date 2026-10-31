@@ -28,7 +28,7 @@ jobs:
           version: 12
 
       - name: Generate index.html
-    run: go run .
+        run: go run .
       - run: pnpm ci
       - run: pnpm build
 
