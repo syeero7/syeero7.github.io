@@ -1,0 +1,29 @@
+
+{{ define "social_links" }}
+  {{ if .WithName }}
+    <div class="grid grid-flow-col justify-center gap-4 md:max-w-fit">
+      {{ range .Socials }}
+            <a
+              href="{{ .URL }}"
+              class="flex border-2 content-center border-border rounded-lg gap-2 px-3 py-2 text-sm focus-bg max-h-11"
+              title="{{ .Name }}"
+            >
+            {{ (SVG .Icon)}}
+              {{ .Name }}
+            </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="grid grid-flow-col justify-center gap-2 md:max-w-fit">
+      {{ range .Socials }}
+            <a
+              href="{{ .URL }}"
+              class="flex"
+              title="{{ .Name }}"
+            >
+            {{ (SVG .Icon)}}
+            </a>
+      {{ end }}
+    </div>
+    {{ end }}
+{{ end }}

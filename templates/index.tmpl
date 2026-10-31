@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Full-stack developer specializing in building web apps and CLI tools."
+        />
+        <link rel="icon" type="image/webp" href="/logo.webp" />
+        <title>Emal Hasitha</title>
+    </head>
+    <body class="min-h-screen bg-background text-muted-foreground font-sans">
+        <div class="max-w-4xl min-w-xs mx-auto">
+        {{ template "header" }}
+        <main class="mx-4 py-4">
+          {{ template "about" .About }}
+          {{ template "tech_stack" (TechStack) }}
+          {{ template "projects" .Projects }}
+        </main>
+        {{ template "footer" .Footer }}
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

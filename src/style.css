@@ -121,3 +121,37 @@ div:has(> .marquee) {
     transform: translateX(-100%);
   }
 }
+
+[popovertarget="themepopover"] {
+  anchor-name: --theme-menu-button;
+}
+
+#themepopover {
+  position-anchor: --theme-menu-button;
+  top: anchor(bottom);
+  left: anchor(left);
+
+  transition-property: opacity, display, transform;
+  transition-duration: 0.25s;
+  transition-behavior: allow-discrete;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+
+  &:popover-open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@starting-style {
+  #themepopover {
+    opacity: 1;
+    transform: translateY(0);
+
+    &:popover-open {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}

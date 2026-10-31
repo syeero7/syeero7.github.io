@@ -1,0 +1,15 @@
+{{ define "tech_stack" }}
+    <div class="mt-8 overflow-hidden h-10 rounded-full">
+      <ul
+        class="marquee gap-4 items-center py-2 font-semibold flex text-foreground"
+        data-marquee
+      >
+    {{ range $lang, $url := . }}
+          <li class="flex gap-2 shrink-0">
+            <img src="{{ $url }}" alt="{{ $lang }}" class="size-6" />
+            <span>{{ $lang }}</span>
+          </li>
+      {{ end }}
+      </ul>
+    </div>
+{{ end }}
