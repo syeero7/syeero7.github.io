@@ -51,7 +51,7 @@ func main() {
 			Title:       "ADB Explorer",
 			SourceURL:   ghURL("adb-explore"),
 			ImageURL:    "/project-adb-explorer.webp",
-			Description: "A cross-platform desktop app built for file transfer and management between PC and Android mobile devices using ABD (Android Debug Bridge) protocol.",
+			Description: "A cross-platform desktop app built for file transfer and management between PC and Android mobile devices using ADB (Android Debug Bridge) protocol.",
 			Languages:   []string{"Go", "Svelte", "TypeScript", "CSS"},
 		},
 		{
